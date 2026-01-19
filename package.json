@@ -1,7 +1,7 @@
 {
   "name": "playwrightpractice",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"# PlaywrightPractice\"",
   "main": "index.js",
   "scripts": {},
   "keywords": [],
@@ -11,5 +11,16 @@
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@types/node": "^25.0.3"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jstnedy/PlaywrightPractice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jstnedy/PlaywrightPractice/issues"
+  },
+  "homepage": "https://github.com/jstnedy/PlaywrightPractice#readme"
 }

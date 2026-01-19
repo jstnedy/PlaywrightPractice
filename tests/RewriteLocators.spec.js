@@ -69,19 +69,9 @@ test.only('Page Playwright Test', async ({page})=> {
    await page.waitForTimeout(2000);
    await page.pause();
    //Find and add "Zara Coat 3" to cart
-   async function addItemToCart(page, itemName) {
-   const itemCount = await cartItems.count();
-      
-      for(let i = 0; i < itemCount; i++) {
-         const itemTitle = await cartItems.nth(i).locator("b").textContent();
-         
-         if(itemTitle.trim() === itemName) {
-            await cartItems.nth(i).locator("text=Add to Cart").click();
-            console.log(`${itemName} has been added to cart`);
-            return;
-         }
-      }
-   }
+   await cartItems.filter({hasText: 'ZARA COAT 3'}).getByRole('button', {name: 'Add To Cart'}).click();
+
+
 
 await addItemToCart(page, "ZARA COAT 3");
 // await addItemToCart(page, "ADIDAS ORIGINAL");
