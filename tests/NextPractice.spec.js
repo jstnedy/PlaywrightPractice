@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test');
 
-test('Playwright Special Locators', async ({page})=> {
+test.only('Playwright Special Locators', async ({page})=> {
    
    //Land on Webpage
    await page.goto("http://rahulshettyacademy.com/angularpractice/");
@@ -12,6 +12,7 @@ test('Playwright Special Locators', async ({page})=> {
    await expect(page.getByText("Success! The Form has been submitted successfully!.")).toBeVisible();
    await page.getByRole('link', {name: 'Shop'}).click();
    await page.locator("app-card").filter({hasText: 'Blackberry'}).getByRole("Button").click();
+   await page.locator("[class='nav-link btn btn-primary']").click();
    await page.pause();
    
 

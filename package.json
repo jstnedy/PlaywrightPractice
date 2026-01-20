@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "\"# PlaywrightPractice\"",
   "main": "index.js",
+  "editor.codeLens": true,
   "scripts": {},
   "keywords": [],
   "author": "",
